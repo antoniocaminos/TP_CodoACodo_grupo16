@@ -1,0 +1,6 @@
+Clave de la API
+436ac6f370affe312b9c2f73aca73d89
+Token de acceso de lectura a la API
+eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0MzZhYzZmMzcwYWZmZTMxMmI5YzJmNzNhY2E3M2Q4OSIsInN1YiI6IjY2MTJjZWExNjdkY2M5MDE2MzljNzVlMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.bI7B8duUBT_WILBaL2kO5l6jdwkRPxZbGDXn6eSx4Uc
+https://www.youtube.com/watch?v=5iiF_hxhLB4
+https://developer.themoviedb.org/docs/append-to-response

@@ -1,6 +1,18 @@
-Clave de la API
-436ac6f370affe312b9c2f73aca73d89
-Token de acceso de lectura a la API
-eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0MzZhYzZmMzcwYWZmZTMxMmI5YzJmNzNhY2E3M2Q4OSIsInN1YiI6IjY2MTJjZWExNjdkY2M5MDE2MzljNzVlMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.bI7B8duUBT_WILBaL2kO5l6jdwkRPxZbGDXn6eSx4Uc
 https://www.youtube.com/watch?v=5iiF_hxhLB4
 https://developer.themoviedb.org/docs/append-to-response
+
+Clave de la API
+9d0e80f18dff80d2aef140cf5002de0c
+Token de acceso de lectura a la API
+eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5ZDBlODBmMThkZmY4MGQyYWVmMTQwY2Y1MDAyZGUwYyIsInN1YiI6IjY2MTJjZWExNjdkY2M5MDE2MzljNzVlMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.DtleNFRi0KyCkeb2MFj04HI442HQ9wHc5QRwptgSiDc
+
+ultimo que sirve
+const api_key = '8312ad50';
+const api_url = 'https://www.omdbapi.com';
+
+TMDB
+
+Clave de la API
+df5e2f1b886764d65236120a86ec7dd5
+Token de acceso de lectura a la API
+eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZjVlMmYxYjg4Njc2NGQ2NTIzNjEyMGE4NmVjN2RkNSIsInN1YiI6IjY2MWFhMDc0ZDBiNDM0MDE3ZDg5NGEyMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Kw7v7uE91QOnKQB0u9LRcQBNlrB2LQu4QZlZBSRuhEg

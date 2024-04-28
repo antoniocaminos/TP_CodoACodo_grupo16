@@ -15,9 +15,16 @@
     "footer footer footer footer"
 }
 .header {
-    grid-area: header;
-    background-color: lightcyan;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgba(33, 37, 41, 255);
+    color: white;
+    top: 0;
+    transition: top 0.3s;
+    padding-top: 1vh;
 }
 .main {
     grid-area: main;
@@ -30,8 +37,9 @@
 }
 
 .footer {
+    color: white;
     grid-area: footer;
-    background-color: lightcyan;
+    background-color: rgba(33, 37, 41, 255);
     padding: 20px;
 }
 .footer p{
@@ -79,19 +87,7 @@
     width: auto;
     height: 700px;
 }/* probar stiky */
-.header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background-color: lightcyan;
-    /* position: sticky; */
-    top: 0;
-    width: 100%;
-    transition: top 0.3s;
-    margin-top: 1vh;
-}
+
 .movies-container{
     position: relative;
 }

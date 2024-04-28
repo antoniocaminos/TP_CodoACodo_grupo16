@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto - Sitio de Películas</title>
+    <link rel="stylesheet" href="Styles/formulario.css">
+</head>
+<body>
+    <header>
+        <h1 style="font-size:100px;">Sitio de Películas</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="popular.html">Películas Populares</a></li>
+                <li><a href="recent.html">Recientemente Añadidas</a></li>
+                <li><a href="genres.html">Explorar Géneros</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="contact-form">
+            <h2 style="font-size:50px;">Formulario de Contacto</h2>
+            <form action="#" method="POST">
+                <div>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="contact">Correo Electrónico o Teléfono de Contacto:</label>
+                    <input type="text" id="contact" name="contact" required>
+                </div>
+                <div>
+                    <label for="location">Ubicación Geográfica:</label>
+                    <input type="text" id="location" name="location" placeholder="País">
+                </div>
+                <div>
+                    <label>Motivo de Consulta:</label><br>
+                    <input type="radio" id="movie" name="reason" value="consulta">
+                    <label for="movie">Consulta sobre una película específica</label><br>
+                    <input type="radio" id="improve" name="reason" value="sugerencias">
+                    <label for="improve">Sugerencias para mejorar el sitio</label><br>
+                    <input type="radio" id="report" name="reason" value="problema-contenido">
+                    <label for="report">Reportar un problema de contenido</label><br>
+                    <input type="radio" id="technical" name="reason" value="problema-tecnico">
+                    <label for="technical">Problemas técnicos con la reproducción del contenido</label><br>
+                    <input type="radio" id="other" name="reason" value="otras-consultas">
+                    <label for="other">Otras consultas o comentarios</label>
+                </div>
+                <br>
+                <div>
+                    <label for="message">Escribe tu mensaje:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <div>
+                    <label>Género de Películas Preferido:</label><br>
+                    <select id="genre" name="genre">
+                        <option value="">Selecciona una opción</option>
+                        <option value="accion">Acción</option>
+                        <option value="comedia">Comedia</option>
+                        <option value="drama">Drama</option>
+                        <option value="ciencia-ficcion">Ciencia Ficción</option>
+                        <option value="terror/horror">Terror/Horror</option>
+                        <option value="romantico">Romántico</option>
+                        <option value="suspenso/misterio">Suspenso/Misterio</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <input type="text" id="other-genre" name="other-genre" placeholder="Especifica otro género">
+                </div>
+                <div>
+                    <label for="language">Preferencia de Idioma:</label><br>
+                    <select id="language" name="language">
+                        <option value="">Selecciona una opción</option>
+                        <option value="es">Español</option>
+                        <option value="en">Inglés</option>
+                        <option value="fr">Francés</option>
+                        <option value="de">Alemán</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <input type="text" id="other-language" name="other-language" placeholder="Especifica otro idioma">
+                <br>
+                <div>
+                    <label for="how-found">¿Cómo encontraste nuestro sitio web?</label><br>
+                    <select id="how-found" name="how-found">
+                        <option value="">Selecciona una opción</option>
+                        <option value="busqueda">Motores de Búsqueda</option>
+                        <option value="redes-sociales">Redes Sociales</option>
+                        <option value="recomendacion">Recomendación de un amigo</option>
+                        <option value="publicidad">Publicidad</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="experience">Puntaje de Experiencia como usuario:</label>
+                    <input type="number" id="experience" name="experience" min="1" max="5">
+                </div>
+                <br> 
+                <div>
+                    <label for="newsletter">Suscribirse al Boletín de Noticias:</label>
+                    <input type="checkbox" id="newsletter" name="newsletter" value="si">
+                    <label for="newsletter">Sí, me gustaría recibir actualizaciones, novedades y ofertas por correo electrónico</label>
+                    <br> <br>
+                </div>
+                <button type="submit">Enviar Mensaje</button>
+                <br> <br>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Derechos de autor &copy; 2024 Sitio de Películas</p>
+    </footer>
+</body>
+</html>

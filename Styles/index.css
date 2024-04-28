@@ -1,0 +1,46 @@
+.body {
+    justify-content: center;
+    height: 100vh;
+    /* Ensure the body covers the entire viewport height */
+    margin: 0;
+    /* Remove default body margin */
+}
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(33, 37, 41, 255);
+}
+#carouselExampleIndicators {
+    padding-top: 5vh;
+    padding-bottom: 1vh;
+}
+.carousel-inner {
+    box-shadow: 0vh 1vh 6vh rgba(101, 101, 101, 0.549);
+}
+.carousel-caption span{
+    text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
+}
+.index-blurb {
+    text-align: center;
+    padding-top: 5vh;
+    background: linear-gradient(to bottom, rgba(33, 37, 41, 255) 50%, rgba(0, 0, 0, 0) 90%);
+}
+.index-blurb h1 {
+    color: white;
+}
+
+.index-grid {
+    margin: 5vh;
+}
+.column {
+    text-align: center;
+}
+
+.column img {
+    max-width: 100%;
+    height: auto;
+}
+/* .card{
+    box-shadow: 10px -10px 10px rgba(147, 147, 147, 0.651);
+} */

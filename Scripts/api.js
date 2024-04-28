@@ -31,3 +31,24 @@ fetch(url)
     });
   })
   .catch(error => console.error('Error fetching data:', error));
+
+fetch(url)
+  .then((response) => response.json())
+  .then((data) => {
+    const carouselItems = document.querySelectorAll(".carousel-item"); // Select all carousel items
+
+    // Loop through the first three carousel items and add movie data to them
+    for (let i = 0; i < Math.min(data.results.length, 7); i++) {
+      const movie = data.results[i];
+      const carouselItem = carouselItems[i];
+      const movieHtml = `
+        <img class="d-block w-100 carousel-img" src="${baseImageUrl}${movie.backdrop_path}" alt="${movie.title}">
+        <div class="carousel-caption d-none d-block">
+          <h2><span>${movie.title}</span></h2>
+          <h5><span>${movie.overview}</span></h5>
+        </div>
+      `;
+      carouselItem.innerHTML = movieHtml;
+    }
+  })
+  .catch((error) => console.error("Error fetching data:", error));

@@ -70,23 +70,27 @@
 .twitch-icon{
     color:  #6441a5
 }
-.links-hader{
-    text-align:center;
-    align-content: center;
-    padding-left: 20rem;
-    padding-right: 20rem;
+.links-header a{
+    text-align: center;
+    padding-left: 2vh;
+    color: inherit;
 }
 .cotenido{
     width: auto;
     height: 700px;
 }/* probar stiky */
-.header{
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
     background-color: lightcyan;
     /* position: sticky; */
     top: 0;
     width: 100%;
     transition: top 0.3s;
+    margin-top: 1vh;
 }
 .movies-container{
     position: relative;

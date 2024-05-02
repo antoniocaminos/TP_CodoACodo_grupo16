@@ -1,0 +1,23 @@
+ {
+    text-align: justify; /* Justifica el texto */
+    margin: 0 20px; /* Establece márgenes de 20px a la izquierda y a la derecha */
+}
+.imagen-grande {
+    width:100%;
+    height:100%;
+}
+.cuerpo {
+    
+background-color: rgba(23, 23, 24, 0.925);
+}
+.fondo-color {
+    background-color: #eceae5; /* Color de fondo */
+    padding: 20px; /* Añade espacio alrededor del contenido para que el fondo sea visible */
+       }
+.color-titulo {
+    background-color: #999394; /* Color de fondo */
+    padding: 20px; /* Añade espacio alrededor del contenido para que el fondo sea visible */
+ }
+ .color-equipo{
+    background-color:#eceae5; /* Color de fondo */
+ }

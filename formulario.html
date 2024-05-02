@@ -1,117 +1,270 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Contacto - Sitio de Películas</title>
-    <link rel="stylesheet" href="Styles/formulario.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Contacto - Pelispedia</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="Styles/style.css">
+  <link rel="stylesheet" href="Styles/formulario.css">
+  <link rel="stylesheet" href="Styles/rating.css">
 </head>
+
 <body>
-    <header>
-        <h1 style="font-size:100px;">Sitio de Películas</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="popular.html">Películas Populares</a></li>
-                <li><a href="recent.html">Recientemente Añadidas</a></li>
-                <li><a href="genres.html">Explorar Géneros</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section id="contact-form">
-            <h2 style="font-size:50px;">Formulario de Contacto</h2>
-            <form action="#" method="POST">
-                <div>
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div>
-                    <label for="contact">Correo Electrónico o Teléfono de Contacto:</label>
-                    <input type="text" id="contact" name="contact" required>
-                </div>
-                <div>
-                    <label for="location">Ubicación Geográfica:</label>
-                    <input type="text" id="location" name="location" placeholder="País">
-                </div>
-                <div>
-                    <label>Motivo de Consulta:</label><br>
-                    <input type="radio" id="movie" name="reason" value="consulta">
-                    <label for="movie">Consulta sobre una película específica</label><br>
-                    <input type="radio" id="improve" name="reason" value="sugerencias">
-                    <label for="improve">Sugerencias para mejorar el sitio</label><br>
-                    <input type="radio" id="report" name="reason" value="problema-contenido">
-                    <label for="report">Reportar un problema de contenido</label><br>
-                    <input type="radio" id="technical" name="reason" value="problema-tecnico">
-                    <label for="technical">Problemas técnicos con la reproducción del contenido</label><br>
-                    <input type="radio" id="other" name="reason" value="otras-consultas">
-                    <label for="other">Otras consultas o comentarios</label>
-                </div>
-                <br>
-                <div>
-                    <label for="message">Escribe tu mensaje:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                </div>
-                <div>
-                    <label>Género de Películas Preferido:</label><br>
-                    <select id="genre" name="genre">
-                        <option value="">Selecciona una opción</option>
-                        <option value="accion">Acción</option>
-                        <option value="comedia">Comedia</option>
-                        <option value="drama">Drama</option>
-                        <option value="ciencia-ficcion">Ciencia Ficción</option>
-                        <option value="terror/horror">Terror/Horror</option>
-                        <option value="romantico">Romántico</option>
-                        <option value="suspenso/misterio">Suspenso/Misterio</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                    <input type="text" id="other-genre" name="other-genre" placeholder="Especifica otro género">
-                </div>
-                <div>
-                    <label for="language">Preferencia de Idioma:</label><br>
-                    <select id="language" name="language">
-                        <option value="">Selecciona una opción</option>
-                        <option value="es">Español</option>
-                        <option value="en">Inglés</option>
-                        <option value="fr">Francés</option>
-                        <option value="de">Alemán</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                    <input type="text" id="other-language" name="other-language" placeholder="Especifica otro idioma">
-                <br>
-                <div>
-                    <label for="how-found">¿Cómo encontraste nuestro sitio web?</label><br>
-                    <select id="how-found" name="how-found">
-                        <option value="">Selecciona una opción</option>
-                        <option value="busqueda">Motores de Búsqueda</option>
-                        <option value="redes-sociales">Redes Sociales</option>
-                        <option value="recomendacion">Recomendación de un amigo</option>
-                        <option value="publicidad">Publicidad</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                </div>
-                <br>
-                <div>
-                    <label for="experience">Puntaje de Experiencia como usuario:</label>
-                    <input type="number" id="experience" name="experience" min="1" max="5">
-                </div>
-                <br> 
-                <div>
-                    <label for="newsletter">Suscribirse al Boletín de Noticias:</label>
-                    <input type="checkbox" id="newsletter" name="newsletter" value="si">
-                    <label for="newsletter">Sí, me gustaría recibir actualizaciones, novedades y ofertas por correo electrónico</label>
-                    <br> <br>
-                </div>
-                <button type="submit">Enviar Mensaje</button>
-                <br> <br>
-            </form>
-        </section>
-    </main>
-    
-    <footer>
-        <p>Derechos de autor &copy; 2024 Sitio de Películas</p>
-    </footer>
+  <header class="header">
+    <a href="index.html" style="color: inherit">
+      <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" fill="currentColor" class="bi bi-film"
+        viewBox="0 0 16 16">
+        <path
+          d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm4 0v6h8V1zm8 8H4v6h8zM1 1v2h2V1zm2 3H1v2h2zM1 7v2h2V7zm2 3H1v2h2zm-2 3v2h2v-2zM15 1h-2v2h2zm-2 3v2h2V4zm2 3h-2v2h2zm-2 3v2h2v-2zm2 3h-2v2h2z" />
+      </svg>
+    </a>
+    <div class="links-header">
+      <a href="footer.html">Películas Populares</a><a href="">Sobre Nosotros</a><a href="formulario.html">Contacto</a>
+    </div>
+    <h1>Pelispedia</h1>
+  </header>
+  <main class="main-formulario">
+    <section id="contact-form">
+      <h2 style="font-size:50px;">Formulario de Contacto</h2>
+      <form action="#" method="POST">
+        <div class="group">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="group">
+          <label for="contact">Correo Electrónico o Teléfono de Contacto:</label>
+          <input type="text" id="contact" name="contact" required>
+        </div>
+        <div class="group">
+          <label for="location">Ubicación Geográfica:</label>
+          <select id="location" name="location">
+            <option value="">Selecciona un país</option>
+          </select>
+        </div>
+        <div class="group">
+          <label for="language">Tu idioma:</label>
+          <select id="language" name="language">
+            <option value="">Selecciona una opción</option>
+          </select>
+        </div>
+        <div class="custom-radio-container">
+          <label>Motivo de Consulta (elige una opción):</label><br>
+          <div class="custom-radio">
+            <input type="radio" id="movie" name="reason" value="consulta">
+            <label for="movie">Consulta sobre una película específica</label><br>
+          </div>
+          <div class="custom-radio">
+            <input type="radio" id="improve" name="reason" value="sugerencias">
+            <label for="improve">Sugerencias para mejorar el sitio</label><br>
+          </div>
+          <div class="custom-radio">
+            <input type="radio" id="report" name="reason" value="problema-contenido">
+            <label for="report">Reportar un problema de contenido</label><br>
+          </div>
+          <div class="custom-radio">
+            <input type="radio" id="technical" name="reason" value="problema-tecnico">
+            <label for="technical">Problemas técnicos con la reproducción del contenido</label><br>
+          </div>
+          <div class="custom-radio">
+            <input type="radio" id="other" name="reason" value="otras-consultas">
+            <label for="other">Otras consultas o comentarios</label><br>
+          </div>
+        </div>
+        <div class="group">
+          <label for="message">Escribe tu mensaje:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <div class="group">
+          <label>Género de Películas Preferido:</label>
+          <select id="genre" name="genre">
+            <option value="">Selecciona una opción</option>
+            <option value="accion">Acción</option>
+            <option value="comedia">Comedia</option>
+            <option value="drama">Drama</option>
+            <option value="ciencia-ficcion">Ciencia Ficción</option>
+            <option value="terror/horror">Terror/Horror</option>
+            <option value="romantico">Romántico</option>
+            <option value="suspenso/misterio">Suspenso/Misterio</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+        <div class="group">
+          <label for="how-found">¿Cómo encontraste nuestro sitio web?</label>
+          <select id="how-found" name="how-found">
+            <option value="">Selecciona una opción</option>
+            <option value="busqueda">Motores de Búsqueda</option>
+            <option value="redes-sociales">Redes Sociales</option>
+            <option value="recomendacion">Recomendación de un amigo</option>
+            <option value="publicidad">Publicidad</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+        <br>
+        <label>¿Qué tan satisfecho estás con nuestro sitio web?</label>
+        <div class="feedback"> 
+          <label class="angry">
+              <input type="radio" value="1" name="feedback" />
+              <div>
+                  <svg class="eye left">
+                      <use xlink:href="#eye">
+                  </svg>
+                  <svg class="eye right">
+                      <use xlink:href="#eye">
+                  </svg>
+                  <svg class="mouth">
+                      <use xlink:href="#mouth">
+                  </svg>
+              </div>
+          </label>
+          <label class="sad">
+              <input type="radio" value="2" name="feedback" />
+              <div>
+                  <svg class="eye left">
+                      <use xlink:href="#eye">
+                  </svg>
+                  <svg class="eye right">
+                      <use xlink:href="#eye">
+                  </svg>
+                  <svg class="mouth">
+                      <use xlink:href="#mouth">
+                  </svg>
+              </div>
+          </label>
+          <label class="ok">
+              <input type="radio" value="3" name="feedback" />
+              <div></div>
+          </label>
+          <label class="good">
+              <input type="radio" value="4" name="feedback" checked />
+              <div>
+                  <svg class="eye left">
+                      <use xlink:href="#eye">
+                  </svg>
+                  <svg class="eye right">
+                      <use xlink:href="#eye">
+                  </svg>
+                  <svg class="mouth">
+                      <use xlink:href="#mouth">
+                  </svg>
+              </div>
+          </label>
+          <label class="happy">
+              <input type="radio" value="5" name="feedback" />
+              <div>
+                  <svg class="eye left">
+                      <use xlink:href="#eye">
+                  </svg>
+                  <svg class="eye right">
+                      <use xlink:href="#eye">
+                  </svg>
+              </div>
+          </label>
+      </div>
+              
+      <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+          <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 4" id="eye">
+              <path d="M1,1 C1.83333333,2.16666667 2.66666667,2.75 3.5,2.75 C4.33333333,2.75 5.16666667,2.16666667 6,1"></path>
+          </symbol>
+          <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 7" id="mouth">
+              <path d="M1,5.5 C3.66666667,2.5 6.33333333,1 9,1 C11.6666667,1 14.3333333,2.5 17,5.5"></path>
+          </symbol>
+      </svg>
+        <br>
+        <label for="newsletter">Suscribirse al Boletín de Noticias:</label>
+        <div class="d-flex">
+          <input type="checkbox" id="newsletter" name="newsletter" value="si">
+          <label class="pl-1" for="newsletter">Sí, me gustaría recibir actualizaciones, novedades y ofertas por correo
+            electrónico</label>
+          </div>
+          <br>
+        <div class="group">
+          <label for="avatar">Seleccionar una imagen:</label>
+          <input type="file" id="avatar" name="avatar" accept="image/*">
+        </div>
+        <br>
+        <button type="submit">Enviar Mensaje</button>
+        <br><br>
+      </form>
+    </section>
+  </main>
+  <div class="footer">
+    <div class="icons">
+      <a href="https://www.facebook.com" class="facebook-icon" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook"
+          viewBox="0 0 16 16">
+          <path
+            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+        </svg>
+      </a>
+      <a href="https://www.instagram.com" class="instagram-icon" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram"
+          viewBox="0 0 16 16">
+          <path
+            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+        </svg>
+      </a>
+      <a href="https://www.x.com" class="x-icon" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x"
+          viewBox="0 0 16 16">
+          <path
+            d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+        </svg>
+      </a>
+      <a href="https://www.tiktok.com" class="tiktok-icon" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok"
+          viewBox="0 0 16 16">
+          <path
+            d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
+        </svg>
+      </a>
+      <a href="https://web.whatsapp.com/" class="whatsapp-icon" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp"
+          viewBox="0 0 16 16">
+          <path
+            d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+        </svg>
+      </a>
+      <a href="https://www.yuoutube.com" class="youtube-icon" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube"
+          viewBox="0 0 16 16">
+          <path
+            d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
+        </svg>
+      </a>
+      <a href="https://www.twitch.com" class="twitch-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitch"
+          viewBox="0 0 16 16">
+          <path
+            d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142z" />
+          <path d="M11.857 3.143h-1.143V6.57h1.143zm-3.143 0H7.571V6.57h1.143z" />
+        </svg>
+      </a>
+      <a href="https://github.com" class="github-icon" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github"
+          viewBox="0 0 16 16">
+          <path
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+        </svg>
+        <!-- https://github.com/antoniocaminos/footerCodoACodo/blob/main/footer.html -->
+      </a>
+    </div>
+    <p id="copyright"></p>
+  </div>
+  <script src="Scripts/script.js" async defer></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="./Scripts/formulario.js"></script>
 </body>
+
 </html>

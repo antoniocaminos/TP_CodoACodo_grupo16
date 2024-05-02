@@ -6,41 +6,18 @@ body {
     padding: 0;
 }
 
-header {
-    background-image:url(../images/fondo_borroso.png); /* Con esto la imagen se carga si abro el html con live server o doble click */
-    background-size: cover;
-    background-position: center;
-    color: #571007;
-    padding: 20px;
-}
-
-/* Estilos para los enlaces del menú superior */
-header nav ul li a {
-    color: #4d0606; /* Color rosa palo */
-    text-decoration: none; /* Quitar subrayado */
-}
-
-header nav ul li a:hover {
-    text-decoration: underline; /* Subrayado al pasar el mouse */
-}
-
 main {
     padding: 20px;
-}
-
-footer {
-    background-color: #291919;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
 }
 
 /* Estilos del formulario de contacto */
 #contact-form {
     background-color: #fff;
-    padding: 20px;
+    padding: 60px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 #contact-form h2 {
@@ -55,7 +32,7 @@ footer {
 #contact-form input[type="text"],
 #contact-form textarea,
 #contact-form select {
-    width: 100%;
+    width: 70%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
@@ -64,7 +41,7 @@ footer {
 }
 
 #contact-form select {
-    height: 40px;
+    height: 50px;
 }
 
 #contact-form input[type="submit"] {
@@ -74,6 +51,8 @@ footer {
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
+    margin:auto;
+    display: block;
 }
 
 #contact-form input[type="submit"]:hover {
@@ -95,4 +74,32 @@ footer {
 .error-message {
     color: #e74c3c; /* Color rojo para mensaje de error */
     margin-top: 5px;
+}
+
+/* Estilos para los botones de opción personalizados */
+.custom-radio-container {
+    max-width: 600px; /* Cambia el valor según tu preferencia */
+}
+
+.custom-radio input[type="radio"] {
+    display: none;
+}
+
+.custom-radio label {
+    width: 80%;
+    display: inline; /* Cambiado de inline-block a inline */
+    padding: 0px 20px;
+    margin: 0 0px; /* Eliminar el margen horizontal */
+    border: 2px solid #869c06;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.custom-radio input[type="radio"]:checked + label {
+    background-color: #215f11;
+    color: #fff;
+}
+
+.group {
+    margin-bottom: 1rem;
 }

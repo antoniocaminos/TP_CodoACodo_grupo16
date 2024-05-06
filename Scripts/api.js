@@ -24,6 +24,7 @@ fetch(url)
             <h5 class="card-title">${movie.title}</h5>
             <p class="card-text">${movie.overview}</p>
             <p class="card-text"><small class="text-muted">Release Date: ${movie.release_date}</small></p>
+            <button class="btn btn-primary" onclick="openTrailer('${movie.id}', '${movie.title}')">Ver Trailer</button>
           </div>
         </div>
       `;
@@ -52,3 +53,44 @@ fetch(url)
     }
   })
   .catch((error) => console.error("Error fetching data:", error));
+
+  function openTrailer(movieId, movieTitle) {
+    // You need to fetch the trailer URL based on the movie ID
+    const trailerUrl = `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${api_key}&language=en-US`;
+
+    fetch(trailerUrl)
+      .then((response) => response.json())
+      .then((data) => {
+        // Assuming the first video in the results array is the trailer
+        const trailerKey = data.results[0].key;
+        const iframeUrl = `https://www.youtube.com/embed/${trailerKey}`;
+
+        // Set the trailer iframe source
+        const trailerIframe = document.createElement("iframe");
+        trailerIframe.setAttribute("src", iframeUrl);
+        trailerIframe.setAttribute("width", "100%");
+        trailerIframe.setAttribute("height", "315");
+        trailerIframe.setAttribute("allowfullscreen", "true");
+
+        // Clear existing trailer content and append new trailer iframe
+        const trailerContainer = document.getElementById("trailerContainer");
+        trailerContainer.innerHTML = "";
+        trailerContainer.appendChild(trailerIframe);
+
+        // Set modal title
+        const modalTitle = document.getElementById("trailerModalLabel");
+        modalTitle.textContent = `Trailer - ${movieTitle}`;
+
+        // Show the modal
+        const modal = new bootstrap.Modal(
+          document.getElementById("trailerModal")
+        );
+        modal.show();
+
+        // Add event listener to stop video when modal is closed
+        modal._element.addEventListener("hidden.bs.modal", function () {
+          trailerIframe.setAttribute("src", "");
+        });
+      })
+      .catch((error) => console.error("Error fetching trailer data:", error));
+  }

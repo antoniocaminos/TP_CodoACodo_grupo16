@@ -47,8 +47,25 @@ document.getElementById('avatar').addEventListener('change', handleFileUpload);
 //función enviar formulario
 document.querySelector('form').addEventListener('submit', function (event) {
   event.preventDefault(); // Prevenir la recarga de la página
-  this.reset(); // Limpiar el formulario
-  alert('Formulario enviado con éxito'); // Mostrar mensaje de éxito
-  window.location.reload();
-  window.scrollTo(0, 0);
+
+  // Validar inputs requeridos
+  const inputs = document.querySelectorAll('input[required], select[required], textarea[required]');
+  let isValid = true;
+  inputs.forEach(input => {
+    if (input.value.trim() === '') {
+      isValid = false;
+      input.classList.add('error');
+    } else {
+      input.classList.remove('error');
+    }
+  });
+
+  if (isValid) {
+    this.reset(); // Limpiar el formulario
+    alert('Formulario enviado con éxito'); // Mostrar mensaje de éxito
+    window.location.reload();
+    window.scrollTo(0, 0);
+  } else {
+    alert('Por favor, complete todos los campos requeridos');
+  }
 });

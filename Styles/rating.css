@@ -44,7 +44,8 @@
       transition: background 0.4s, box-shadow 0.4s, transform 0.3s;
       -webkit-tap-highlight-color: transparent;
     }
-    div {
+    span {
+      display: block;
       width: 40px;
       height: 40px;
       position: relative;
@@ -98,7 +99,7 @@
       --step-1-ry: 20deg;
       --step-2-rx: -24deg;
       --step-2-ry: -20deg;
-      div {
+      span {
         &:before {
           --r: 20deg;
         }
@@ -116,7 +117,7 @@
       input {
         &:checked {
           animation: angry 1s linear;
-          & + div {
+          & + span {
             &:before {
               --middle-y: -2px;
               --middle-r: 22deg;
@@ -136,7 +137,7 @@
       --step-1-ry: -12deg;
       --step-2-rx: -18deg;
       --step-2-ry: 14deg;
-      div {
+      span {
         &:before,
         &:after {
           --b: var(--active-tear);
@@ -162,7 +163,7 @@
       }
       input {
         &:checked {
-          & + div {
+          & + span {
             &:before,
             &:after {
               animation: tear 0.6s linear forwards;
@@ -178,7 +179,7 @@
       --step-2-rx: 4deg;
       --step-2-ry: 22deg;
       --step-2-rz: -6deg;
-      div {
+      span {
         &:before {
           --l: 12px;
           --t: 17px;
@@ -198,7 +199,7 @@
       }
       input {
         &:checked {
-          & + div {
+          & + span {
             &:before {
               --middle-s-y: 0.35;
               animation: toggle 0.2s linear forwards;
@@ -216,7 +217,7 @@
       --step-1-rz: 10deg;
       --step-2-rx: 10deg;
       --step-2-rz: -8deg;
-      div {
+      span {
         &:before {
           --b: var(--m, var(--normal-mouth));
           --w: 5px;
@@ -248,7 +249,7 @@
       }
       input {
         &:checked {
-          & + div {
+          & + span {
             svg {
               &.mouth {
                 --middle-y: 1px;
@@ -261,7 +262,7 @@
       }
     }
     &.happy {
-      div {
+      span {
         --step-1-rx: 18deg;
         --step-1-ry: 24deg;
         --step-2-rx: 18deg;
@@ -286,7 +287,7 @@
       }
       input {
         &:checked {
-          & + div {
+          & + span {
             &:after {
               --middle-s-x: 0.95;
               --middle-s-y: 0.75;
@@ -301,7 +302,7 @@
         --sb: var(--active);
         --sh: var(--active-shadow);
         --sht: var(--active-shadow-top);
-        & + div {
+        & + span {
           --m: var(--active-mouth);
           --e: var(--active-eye);
           animation: shake 0.8s linear forwards;
@@ -314,7 +315,7 @@
         }
         &:active {
           transform: scale(0.925);
-          & + div {
+          & + span {
             transform: scale(0.925);
           }
         }

@@ -45,14 +45,7 @@
     .col-sm-6 {
         padding-top: 2vh;
     }
-    .carousel-item h5{
-        font-size:xx-small;
-        max-width: 200ch;
-        overflow:hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    .carousel-item h2 {
-        font-size: small;
+    .carousel-item h5, h2{
+        visibility: hidden;
     }
 }

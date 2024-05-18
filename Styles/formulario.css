@@ -7,7 +7,7 @@ body {
 }
 
 main {
-    padding: 20px;
+    padding: 20px 10px;
 }
 
 /* Estilos del formulario de contacto */
@@ -18,6 +18,10 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 800px;
     margin: 0 auto;
+    @media screen and (max-width: 600px) {
+            padding: 30px 20px;
+        
+    }
 }
 
 #contact-form h2 {
@@ -60,14 +64,13 @@ main {
 }
 
 /* Estilos para campos requeridos */
-#contact-form input:required,
-#contact-form textarea:required {
-    border-color: #e74c3c; /* Color rojo para campos requeridos */
+#contact-form .error {
+    border-color: #e74c3c !important; /* Color rojo para campos requeridos */
 }
 
 #contact-form input:required:focus,
 #contact-form textarea:required:focus {
-    border-color: #c0392b; /* Color rojo más oscuro para campos requeridos enfocados */
+    border-color: #c0392b !important; /* Color rojo más oscuro para campos requeridos enfocados */
 }
 
 /* Estilos para mensaje de error */
@@ -108,4 +111,12 @@ main {
     form {
         width: 35vh;
     }
+}
+
+.logo-link {
+    color: inherit;
+}
+
+.form-title {
+    font-size: 50px;
 }

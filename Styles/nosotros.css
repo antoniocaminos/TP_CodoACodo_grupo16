@@ -1,7 +1,8 @@
- {
-    text-align: justify; /* Justifica el texto */
-    margin: 0 20px; /* Establece márgenes de 20px a la izquierda y a la derecha */
-}
+.card-img-top {
+    width: 200px; /* Ancho deseado */
+    height: 300px; /* Alto deseado */
+    object-fit: cover; /* la proporción de la imagen */
+      }
 .imagen-grande {
     width:100%;
     height:100%;

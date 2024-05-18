@@ -41,6 +41,18 @@
     max-width: 100%;
     height: auto;
 }
-/* .card{
-    box-shadow: 10px -10px 10px rgba(147, 147, 147, 0.651);
-} */
+@media screen and (max-width: 768px) {
+    .col-sm-6 {
+        padding-top: 2vh;
+    }
+    .carousel-item h5{
+        font-size:xx-small;
+        max-width: 200ch;
+        overflow:hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .carousel-item h2 {
+        font-size: small;
+    }
+}

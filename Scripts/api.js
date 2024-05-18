@@ -19,6 +19,7 @@ fetch(url)
       movieCard.classList.add('col-md-4', 'mb-4');
       movieCard.innerHTML = `
         <div class="card">
+          
           <img src="${baseImageUrl}${movie.poster_path}" class="card-img-top" alt="${movie.title}">
           <div class="card-body">
             <h5 class="card-title">${movie.title}</h5>

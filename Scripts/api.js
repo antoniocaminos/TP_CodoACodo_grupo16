@@ -37,14 +37,18 @@ fetch(url)
 fetch(url)
   .then((response) => response.json())
   .then((data) => {
-    const carouselItems = document.querySelectorAll(".carousel-item"); // Select all carousel items
-
-    // Loop through the first three carousel items and add movie data to them
+    const carouselItems = document.querySelectorAll(".carousel-item"); // Select all carousel items   
+    const isMobileView = window.matchMedia("(max-width: 768px)").matches;
+    console.log(isMobileView);
+    
+    // Loop through the 7 carousel items and add movie data to them
     for (let i = 0; i < Math.min(data.results.length, 7); i++) {
       const movie = data.results[i];
       const carouselItem = carouselItems[i];
+      const imageUrl = isMobileView ? movie.poster_path : movie.backdrop_path;
+
       const movieHtml = `
-        <img class="d-block w-100 carousel-img" src="${baseImageUrl}${movie.backdrop_path}" alt="${movie.title}">
+        <img class="d-block w-100 carousel-img" src="${baseImageUrl}${imageUrl}" alt="${movie.title}">
         <div class="carousel-caption d-none d-block">
           <h2><span>${movie.title}</span></h2>
           <h5><span>${movie.overview}</span></h5>
